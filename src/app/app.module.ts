@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GerenciadorModule } from '../gerenciador/gerenciador.module';
+import { GerenciadorModule } from '../app/gerenciador/gerenciador.module';
 import { HeaderComponent } from './header/header.component'
 
 @NgModule({
@@ -14,7 +16,10 @@ import { HeaderComponent } from './header/header.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GerenciadorModule
+    GerenciadorModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
