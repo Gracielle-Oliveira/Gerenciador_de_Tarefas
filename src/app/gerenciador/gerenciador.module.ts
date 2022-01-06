@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GerenciadorRoutingModule } from '../gerenciador/gerenciador-routing.module';
 
 import { CadastrarTarefasComponent } from '../paginas/cadastrar-tarefas/cadastrar-tarefas.component';
@@ -19,7 +20,9 @@ import { TarefasService } from '../service';
   ],
   imports: [
     CommonModule,
-    GerenciadorRoutingModule
+    GerenciadorRoutingModule,
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers:  [
     TarefasService,

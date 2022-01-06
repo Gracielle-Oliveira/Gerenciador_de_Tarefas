@@ -16,10 +16,6 @@ export class ListarTarefasComponent implements OnInit {
   ngOnInit(): void {
   	this.tarefas = this.listarTodos();
     console.log(this.listarTodos());
-    this.tarefas = [
-      new Tarefas(1, "Tarefa 1", false),
-      new Tarefas(2, "Tarefa 2", true)
-    ]
     
   }
 
