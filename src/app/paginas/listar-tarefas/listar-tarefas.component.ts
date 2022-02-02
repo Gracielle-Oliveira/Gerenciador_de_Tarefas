@@ -9,14 +9,12 @@ import { Tarefas } from '../../shared';
 })
 export class ListarTarefasComponent implements OnInit {
   
-  tarefas: Tarefas[];
+  public tarefas: Tarefas[];
 
   constructor( private service: StorageService) { }
 
   ngOnInit(): void {
   	this.tarefas = this.listarTodos();
-    console.log(this.listarTodos());
-    
   }
 
   listarTodos(): Tarefas[] {
@@ -37,6 +35,4 @@ export class ListarTarefasComponent implements OnInit {
       this.tarefas = this.service.listarTodos();
     }
   }
-
-
 }

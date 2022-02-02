@@ -13,7 +13,7 @@ export class CadastrarTarefasComponent implements OnInit {
 
   @ViewChild('formTarefa', { static: true }) formTarefa: NgForm;
   
-  tarefa: Tarefas
+  tarefa: Tarefas;
 
   constructor(
     private service: StorageService,

@@ -6,17 +6,16 @@ import { GerenciadorRoutingModule } from '../gerenciador/gerenciador-routing.mod
 import { CadastrarTarefasComponent } from '../paginas/cadastrar-tarefas/cadastrar-tarefas.component';
 import { ListarTarefasComponent } from '../paginas/listar-tarefas/listar-tarefas.component';
 import { EditarTarefasComponent } from '../paginas/editar-tarefas/editar-tarefas.component';
-import { StorageService } from '../service';
-import { TarefasService } from '../service';
-
-
+import { TarefaConcluidaDirective } from '../shared/concluida/tarefa-concluida.directive'
+import { TarefasService, StorageService } from '../service';
 
 
 @NgModule({
   declarations: [
     CadastrarTarefasComponent,
     ListarTarefasComponent,
-    EditarTarefasComponent
+    EditarTarefasComponent,
+    TarefaConcluidaDirective
   ],
   imports: [
     CommonModule,

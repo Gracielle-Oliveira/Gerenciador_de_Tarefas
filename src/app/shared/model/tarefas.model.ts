@@ -1,8 +1,8 @@
 export class Tarefas {
 
-    constructor(
-        public id?: number,
-        public nome?: string,
-        public concluida?: boolean,
-    ) {}
+        constructor(
+            public id?: number,
+            public nome?: string,
+            public concluida?: boolean,
+        ) {}
 }

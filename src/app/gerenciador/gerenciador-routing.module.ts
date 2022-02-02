@@ -6,7 +6,7 @@ import { ListarTarefasComponent } from '../paginas';
 
 export const routes: Routes = [
   { path: '', component: ListarTarefasComponent },
-  { path: 'editar', component: EditarTarefasComponent },
+  { path: 'editar/:id', component: EditarTarefasComponent },
   { path: 'cadastrar', component: CadastrarTarefasComponent },
 
   { path: '', 

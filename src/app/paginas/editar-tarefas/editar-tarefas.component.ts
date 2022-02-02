@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StorageService } from 'src/app/service';
-import { Tarefas } from 'src/app/shared';
+import { Tarefas } from '../../shared';
 
 @Component({
   selector: 'app-editar-tarefas',
@@ -11,8 +11,9 @@ import { Tarefas } from 'src/app/shared';
 })
 export class EditarTarefasComponent implements OnInit {
 
-  @ViewChild('formTarefa') formTarefa: NgForm;
-  tarefa: Tarefas;
+  @ViewChild('formTarefa', { static: true }) formTarefa: NgForm;
+  public tarefa: Tarefas;
+  public id: string
 
   constructor(
     private service: StorageService,
@@ -21,9 +22,9 @@ export class EditarTarefasComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    let id = +this.route.snapshot.params['id'];
+    const id = +this.route.snapshot.params['id'];
     this.tarefa = this.service.buscarPorId(id)
-    console.log('AIDI',id);
+    console.log(this.tarefa);
     
   }
 
